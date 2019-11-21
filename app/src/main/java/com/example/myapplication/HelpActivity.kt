@@ -18,47 +18,56 @@ class HelpActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_help)
 
-        /*   GlobalScope.launch {
 
-                var i =1
+       leve()
 
-                while(true)
-                {
+
+
+
+
+
+
+
+
+
+/*
+
+        for (i in 1..6)
+            imLevellist.setImageLevel(i)
+*/
+
+    }
+
+
+    suspend fun leve(){
+
+        GlobalScope.launch {
+
+            var i =1
+
+            while(true)
+            {
 
 
                 Log.d("GLOBALSCOPE","inside Global scope")
                 delay(1000L)
-                imLevellist.setImageLevel(i)
-                i++
-                if(i==7)
-                i=0
 
-}
+             runOnUiThread {
+                 imLevellist.setImageLevel(i)
+             }
+
+
+               i++
+                if(i==7)
+                    i=0
+
+            }
         }
 
 
-
-
-
-
-*/
-
-
-
-
-
-
-        for (i in 1..6)
-            imLevellist.setImageLevel(i)
-
-
-
-
-
-
-
-
     }
+
+
 
 
 

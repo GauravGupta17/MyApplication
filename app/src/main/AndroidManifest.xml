@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
+
     <uses-feature
         android:name="android.hardware.camera.any"
         android:required="false" />
@@ -39,6 +40,7 @@
         <activity android:name=".HelpActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT"/>
                  <data android:mimeType="text/plain"
 
